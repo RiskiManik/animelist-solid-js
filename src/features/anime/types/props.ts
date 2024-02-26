@@ -1,3 +1,5 @@
+import { Jpg } from "./images";
+
 export interface Pagination {
   last_visible_page: number;
   has_next_page: boolean;
@@ -14,6 +16,7 @@ export interface Trailer {
   youtube_id: string;
   url: string;
   embed_url: string;
+  images: Jpg;
 }
 
 export interface Title {

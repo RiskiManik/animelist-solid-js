@@ -1,10 +1,10 @@
 import { createQuery } from "@tanstack/solid-query";
 import getSeasonNow from "../services/getSeasonNow";
 
-const useGetSeasonNow = () => {
+const useGetSeasonNow = (limit?: number) => {
   return createQuery(() => ({
     queryKey: ["season"],
-    queryFn: getSeasonNow,
+    queryFn: () => getSeasonNow(limit),
   }));
 };
 

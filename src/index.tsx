@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
 import SignUp from "./pages/SignUp";
 import { Provider } from "./context/ContextProvider";
+import "solid-slider/slider.css";
 
 const root = document.getElementById("root");
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
@@ -34,8 +35,8 @@ render(
           <Route path="/" component={Home} />
           <Route path="/anime" component={AnimePage} />
           <Route path="/manga" component={MangaPage} />
-          <SolidQueryDevtools initialIsOpen={false} />
         </Router>
+        <SolidQueryDevtools initialIsOpen={false} />
       </Provider>
     </QueryClientProvider>
   ),

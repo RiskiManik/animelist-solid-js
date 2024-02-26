@@ -19,7 +19,7 @@ const Navbar: Component = () => {
     <div class="px-10 py-5">
       <div class="navbar bg-base-100">
         <div class="flex-1">
-          <h1 class=" text-2xl text-base-content font drop-shadow-sm font-bold ">
+          <h1 class=" text-2xl text-neutral font drop-shadow-sm font-bold ">
             SakurAnime
           </h1>
         </div>

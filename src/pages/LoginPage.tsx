@@ -1,14 +1,22 @@
 import { useNavigate } from "@solidjs/router";
-import { Component, createSignal } from "solid-js";
+import { Component, createSignal, onMount } from "solid-js";
 import { signInWithEmail } from "../features/auth";
 import Toastify from "toastify-js";
 import { LoginBg } from "../assets";
+import getSession from "../features/auth/services/getSession";
 
 const LoginPage: Component = () => {
   const [email, setEmail] = createSignal("");
   const [password, setPassword] = createSignal("");
   const [loading, setLoading] = createSignal(false);
   const navigation = useNavigate();
+
+  onMount(async () => {
+    const session = await getSession();
+    if (session) {
+      navigation("/", { replace: true });
+    }
+  });
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
