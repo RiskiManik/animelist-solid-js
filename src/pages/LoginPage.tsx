@@ -13,8 +13,8 @@ const LoginPage: Component = () => {
 
   onMount(async () => {
     const session = await getSession();
-    if (session) {
-      navigation("/", { replace: true });
+    if (session.data.session) {
+      navigation("/");
     }
   });
 
