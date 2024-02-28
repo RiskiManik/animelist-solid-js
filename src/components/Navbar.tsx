@@ -29,7 +29,7 @@ const Navbar: Component = () => {
       <div class="navbar bg-base-100">
         <div class="flex-1">
           <h1 class=" text-2xl text-neutral font drop-shadow-sm font-bold ">
-            SakurAnime
+            Sakur<span class="text-error">A</span>nime
           </h1>
         </div>
         {showNavbar() && (
